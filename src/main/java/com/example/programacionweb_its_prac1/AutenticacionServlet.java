@@ -1,7 +1,6 @@
 package com.example.programacionweb_its_prac1;
 
 import java.io.*;
-import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +13,6 @@ import io.jsonwebtoken.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
 
 @WebServlet("/autenticacion-servlet/*")
 

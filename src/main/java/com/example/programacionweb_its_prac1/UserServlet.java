@@ -1,14 +1,11 @@
 package com.example.programacionweb_its_prac1;
 
-import com.google.gson.Gson;
 import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.util.Base64;
 
