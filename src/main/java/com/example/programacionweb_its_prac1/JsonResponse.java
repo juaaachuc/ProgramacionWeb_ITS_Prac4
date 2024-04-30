@@ -6,9 +6,21 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+/**
+ * Clase que se utiliza para crear un objeto JSON de respuesta
+ */
 public class JsonResponse {
+    /**
+     * Mensaje de respuesta
+     */
     private String message;
+    /**
+     * Datos de respuesta
+     */
     private Object data;
+    /**
+     * Código de respuesta
+     */
     private int code;
 
     public JsonResponse() {}
@@ -19,6 +31,14 @@ public class JsonResponse {
         this.code = code;
     }
 
+    /**
+     * Método que se utiliza para enviar una respuesta exitosa.
+     * @param req
+     * @param resp
+     * @param message Mensaje de respuesta
+     * @param data Datos de respuesta
+     * @throws IOException
+     */
     public void success(HttpServletRequest req, HttpServletResponse resp, String message, Object data) throws IOException {
         Gson gson = new Gson();
         this.setResponse(message, data, HttpServletResponse.SC_OK);
@@ -29,6 +49,14 @@ public class JsonResponse {
         resp.getWriter().write(json);
     }
 
+    /**
+     * Método que se utiliza para enviar una respuesta fallida.
+     * @param req
+     * @param resp
+     * @param message Mensaje de respuesta
+     * @param code Código de respuesta
+     * @throws IOException
+     */
     public void failed(HttpServletRequest req, HttpServletResponse resp, String message, int code) throws IOException {
         Gson gson = new Gson();
         this.setResponse(message, null, code);
