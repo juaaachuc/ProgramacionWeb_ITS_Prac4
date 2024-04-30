@@ -67,7 +67,7 @@
     </dependencies>
 
     <build>
-        <finalName>programacion-web-its-prac1</finalName>
+        <finalName>programacion-web-its-prac4</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
